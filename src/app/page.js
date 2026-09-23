@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="bg-white text-gray-900">
@@ -77,13 +79,17 @@ export default function Home() {
               ♙
             </button>
 
-            <button className="relative text-xl">
+            <Link href={'/cart'}>
+             <button className="relative text-xl cursor-pointer">
               🛒
 
               <span className="absolute -top-2 -right-2 bg-green-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
                 0
               </span>
             </button>
+            </Link>
+
+           
 
           </div>
 
