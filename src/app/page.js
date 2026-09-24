@@ -50,14 +50,20 @@ export default function Home() {
             <a className="hover:text-green-700">
               Organic
             </a>
-
-            <a className="hover:text-green-700">
+            <Link href={'/offers'}>
+             <p className="hover:text-green-700 cursor-pointer">
               Offers
-            </a>
+            </p>
+            </Link>
 
-            <a className="hover:text-green-700">
+            <Link href={'/aboutUs'}>
+             <p className="hover:text-green-700">
               About Us
-            </a>
+            </p>
+            </Link>
+           
+
+           
           </div>
 
 
