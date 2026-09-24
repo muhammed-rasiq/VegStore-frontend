@@ -235,9 +235,13 @@ export default function Home() {
               </h2>
             </div>
 
-            <button className="text-green-700 font-medium">
+            <Link href={'/viewAllProducts'}>
+             <button className="text-green-700 font-medium cursor-pointer">
               View All Products →
             </button>
+            </Link>
+
+           
 
           </div>
 
