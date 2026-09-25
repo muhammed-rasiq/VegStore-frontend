@@ -5,7 +5,7 @@ export default function Home() {
     <main className="bg-white text-gray-900">
 
       {/* Top Bar */}
-      <div className="bg-green-900 text-white text-sm">
+      {/* <div className="bg-green-900 text-white text-sm">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between">
           <p>Freshness you can taste, quality you can trust.</p>
 
@@ -14,15 +14,15 @@ export default function Home() {
             <span>Help & Support</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       {/* Navbar */}
-      <nav className="border-b border-gray-100 bg-white">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      {/* <nav className="border-b border-gray-100 bg-white">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"> */}
 
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
               <span className="text-green-700 text-xl">✦</span>
             </div>
@@ -30,11 +30,11 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-green-800">
               VeggieMart
             </h1>
-          </div>
+          </div> */}
 
 
           {/* Menu */}
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+          {/* <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <a className="text-green-700 border-b-2 border-green-600 pb-2">
               Home
             </a>
@@ -64,14 +64,14 @@ export default function Home() {
            
 
            
-          </div>
+          </div> */}
 
 
           {/* Right */}
-          <div className="flex items-center gap-5">
+          {/* <div className="flex items-center gap-5"> */}
 
             {/* Search */}
-            <div className="hidden md:flex items-center border border-gray-200 rounded-full px-4 py-2 w-60">
+            {/* <div className="hidden md:flex items-center border border-gray-200 rounded-full px-4 py-2 w-60">
               <span className="text-gray-400 mr-2">⌕</span>
 
               <input
@@ -79,9 +79,9 @@ export default function Home() {
                 placeholder="Search vegetables..."
                 className="outline-none text-sm w-full"
               />
-            </div>
+            </div> */}
 
-            <button className="text-xl">
+            {/* <button className="text-xl">
               ♙
             </button>
 
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
 
         </div>
-      </nav>
+      </nav> */}
 
 
       {/* Hero */}
@@ -136,9 +136,14 @@ export default function Home() {
               delivered directly to your doorstep.
             </p>
 
-            <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-7 py-3.5 rounded-lg font-semibold">
+            <Link href={'/viewAllProducts'}>
+             <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-7 py-3.5 rounded-lg font-semibold cursor-pointer">
               Shop Now →
             </button>
+            
+            </Link>
+
+           
 
 
             {/* Features */}
@@ -165,64 +170,7 @@ export default function Home() {
       </section>
 
 
-      {/* Categories */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-
-        <div className="flex justify-between items-end mb-7">
-
-          <div>
-            <p className="text-green-600 font-medium">
-              Explore
-            </p>
-
-            <h2 className="text-3xl font-bold mt-1">
-              Shop by Category
-            </h2>
-          </div>
-
-          <button className="hidden md:block text-green-700 font-medium">
-            View All Categories →
-          </button>
-
-        </div>
-
-
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
-
-          <Category
-            image="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80"
-            title="Leafy Vegetables"
-            count="18 Items"
-          />
-
-          <Category
-            image="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80"
-            title="Fresh Vegetables"
-            count="24 Items"
-          />
-
-          <Category
-            image="https://images.unsplash.com/photo-1445282768818-728615cc910a?auto=format&fit=crop&w=600&q=80"
-            title="Root Vegetables"
-            count="12 Items"
-          />
-
-          <Category
-            image="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=600&q=80"
-            title="Organic"
-            count="20 Items"
-          />
-
-          <Category
-            image="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80"
-            title="Fresh Produce"
-            count="15 Items"
-          />
-
-        </div>
-
-      </section>
-
+     
 
       {/* Products */}
       <section className="bg-gray-50 py-14">
@@ -236,9 +184,7 @@ export default function Home() {
                 Our Products
               </p>
 
-              <h2 className="text-3xl font-bold mt-1">
-                Best Sellers
-              </h2>
+              
             </div>
 
             <Link href={'/viewAllProducts'}>
@@ -361,9 +307,13 @@ export default function Home() {
 
             </div>
 
-            <button className="bg-green-500 hover:bg-green-400 text-white px-7 py-3 rounded-lg font-semibold whitespace-nowrap">
+            <Link href={'/offers'}>
+             <button className="bg-green-500 hover:bg-green-400 text-white px-7 py-3 rounded-lg font-semibold whitespace-nowrap cursor-pointer">
               Shop Now →
             </button>
+            </Link>
+
+           
 
           </div>
 
@@ -373,7 +323,7 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="bg-gray-950 text-white">
+      {/* <footer className="bg-gray-950 text-white">
 
         <div className="max-w-7xl mx-auto px-6 py-14">
 
@@ -456,7 +406,7 @@ export default function Home() {
 
         </div>
 
-      </footer>
+      </footer> */}
 
     </main>
   );

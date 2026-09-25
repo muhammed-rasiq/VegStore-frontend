@@ -29,47 +29,7 @@ export default function OffersPage() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      {/* Navbar */}
-      <nav className="border-b bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-
-          <h1 className="text-2xl font-bold text-green-700">
-            VegStore
-          </h1>
-
-          <div className="hidden gap-8 md:flex">
-            <a href="/" className="text-gray-700 hover:text-green-600">
-              Home
-            </a>
-
-            <a
-              href="/viewAllProducts"
-              className="text-gray-700 hover:text-green-600"
-            >
-              Products
-            </a>
-
-            <a
-              href="/offers"
-              className="font-semibold text-green-600"
-            >
-              Offers
-            </a>
-
-            <a
-              href="/cart"
-              className="text-gray-700 hover:text-green-600"
-            >
-              Cart
-            </a>
-          </div>
-
-          <button className="rounded-lg border px-4 py-2 text-sm md:hidden">
-            Menu
-          </button>
-
-        </div>
-      </nav>
+     
 
 
       {/* Hero */}
@@ -203,10 +163,6 @@ export default function OffersPage() {
       </section>
 
 
-      {/* Footer */}
-      <footer className="border-t bg-white px-5 py-6 text-center text-sm text-gray-500">
-        © 2026 VegStore. All rights reserved.
-      </footer>
 
     </main>
   );

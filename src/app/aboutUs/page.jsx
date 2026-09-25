@@ -2,60 +2,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
 
-      {/* Navbar */}
-      <nav className="border-b bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-
-          {/* Logo */}
-          <h1 className="text-2xl font-bold text-green-700">
-            VegStore
-          </h1>
-
-          {/* Navigation */}
-          <div className="hidden items-center gap-8 md:flex">
-            <a
-              href="/"
-              className="text-gray-600 hover:text-green-600"
-            >
-              Home
-            </a>
-
-            <a
-              href="/viewAllProducts"
-              className="text-gray-600 hover:text-green-600"
-            >
-              Products
-            </a>
-
-            <a
-              href="/offers"
-              className="text-gray-600 hover:text-green-600"
-            >
-              Offers
-            </a>
-
-            <a
-              href="/about"
-              className="font-semibold text-green-600"
-            >
-              About Us
-            </a>
-
-            <a
-              href="/cart"
-              className="text-gray-600 hover:text-green-600"
-            >
-              Cart
-            </a>
-          </div>
-
-          {/* Mobile Menu */}
-          <button className="rounded-lg border px-4 py-2 text-sm md:hidden">
-            Menu
-          </button>
-
-        </div>
-      </nav>
+     
 
 
       {/* Hero Section */}
@@ -379,10 +326,7 @@ export default function AboutPage() {
       </section>
 
 
-      {/* Footer */}
-      <footer className="border-t bg-white px-5 py-7 text-center text-sm text-gray-500">
-        © 2026 VegStore. All rights reserved.
-      </footer>
+    
 
     </main>
   );

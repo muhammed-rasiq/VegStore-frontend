@@ -2,40 +2,7 @@ export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      {/* Navbar */}
-      <nav className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
-          <div>
-            <h1 className="text-2xl font-bold text-green-800">
-              VeggieMart
-            </h1>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8 text-sm">
-            <span className="text-gray-500">Home</span>
-            <span className="text-green-700 font-semibold border-b-2 border-green-600 pb-2">
-              Products
-            </span>
-            <span className="text-gray-500">Categories</span>
-            <span className="text-gray-500">Offers</span>
-          </div>
-
-          <div className="flex items-center gap-5">
-            <button className="text-xl">
-              ♡
-            </button>
-
-            <button className="relative text-xl">
-              🛒
-              <span className="absolute -top-2 -right-2 bg-green-600 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
-                0
-              </span>
-            </button>
-          </div>
-
-        </div>
-      </nav>
+     
 
 
       {/* Page Header */}
@@ -352,32 +319,7 @@ export default function ProductsPage() {
       </section>
 
 
-      {/* Footer */}
-      <footer className="bg-gray-950 text-white mt-10">
-
-        <div className="max-w-7xl mx-auto px-6 py-10">
-
-          <div className="flex flex-col md:flex-row justify-between gap-5">
-
-            <div>
-              <h2 className="text-xl font-bold text-green-500">
-                VeggieMart
-              </h2>
-
-              <p className="text-gray-500 text-sm mt-2">
-                Fresh vegetables delivered to your doorstep.
-              </p>
-            </div>
-
-            <div className="text-sm text-gray-500">
-              © 2026 VeggieMart. All rights reserved.
-            </div>
-
-          </div>
-
-        </div>
-
-      </footer>
+   
 
     </main>
   );

@@ -2,25 +2,7 @@ export default function CartPage() {
   return (
     <main className="min-h-screen bg-gray-50">
 
-      {/* Header */}
-      <header className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-          <div>
-            <h1 className="text-2xl font-bold text-green-800">
-              VeggieMart
-            </h1>
-            <p className="text-sm text-gray-500 mt-1">
-              Your Shopping Cart
-            </p>
-          </div>
-
-          <button className="text-sm text-gray-600 hover:text-green-700">
-            ← Continue Shopping
-          </button>
-
-        </div>
-      </header>
+      
 
 
       {/* Cart */}
