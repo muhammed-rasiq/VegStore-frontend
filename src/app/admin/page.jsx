@@ -15,6 +15,7 @@ import {
   ShoppingCart,
   UserPlus,
 } from "lucide-react";
+import Link from 'next/link';
 
 function page() {
   return (
@@ -106,8 +107,9 @@ function page() {
 
 
           {/* Orders */}
-          <a
-            href="#"
+          <Link  href="/admin/orders">
+           <p
+           
             className="mt-1 flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
           >
             <ShoppingBag size={19} />
@@ -116,37 +118,45 @@ function page() {
             <span className="ml-auto rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-700">
               12
             </span>
-          </a>
+          </p>
+          </Link>
+         
 
 
           {/* Products */}
-          <a
-            href="#"
+          <Link href={'/admin/products'}>
+            <p
+           
             className="mt-1 flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
           >
             <Package size={19} />
             Products
-          </a>
+          </p>
+          </Link>
+        
 
 
           {/* Customers */}
-          <a
+          {/* <a
             href="#"
             className="mt-1 flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
           >
             <Users size={19} />
             Customers
-          </a>
+          </a> */}
 
 
           {/* Offers */}
-          <a
-            href="#"
+          <Link  href="/admin/offers">
+          <p
+           
             className="mt-1 flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
           >
             <Tag size={19} />
             Offers
-          </a>
+          </p>
+          </Link>
+          
 
 
           <div className="my-5 border-t" />
