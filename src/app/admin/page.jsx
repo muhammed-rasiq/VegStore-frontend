@@ -168,13 +168,18 @@ function page() {
 
 
           {/* Settings */}
-          <a
-            href="#"
+          <Link href="/admin/settings">
+          
+           <p
+            
             className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm text-gray-600 hover:bg-gray-50 hover:text-green-700"
           >
             <Settings size={19} />
             Settings
-          </a>
+          </p>
+          
+          </Link>
+         
 
 
           {/* Logout */}
