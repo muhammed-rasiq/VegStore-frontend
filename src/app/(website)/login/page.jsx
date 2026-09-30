@@ -1,4 +1,30 @@
+'use client';
+import axios from "axios";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function LoginPage() {
+
+
+  const [phoneNum,setPhoneNum]=useState({
+    phone:""
+  })
+  const router = useRouter();
+
+  const handlePhoneLogin = async()=>{
+    try {
+      const response = await axios.post("http://localhost:3000/api/auth/phoneNumberLogi",phoneNum)
+      console.log(response)
+
+      if(response.status===200){
+        router.push('/OTP')
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-gray-50 px-5">
 
@@ -28,7 +54,7 @@ export default function LoginPage() {
 
           <div className="flex overflow-hidden rounded-lg border border-gray-300 focus-within:border-green-600 focus-within:ring-1 focus-within:ring-green-600">
 
-            <span className="flex items-center border-r bg-gray-50 px-4 text-sm text-gray-600">
+            <span className="flex items-center border-r bg-gray-50 px-4 text-sm text-gray-900">
               +91
             </span>
 
@@ -36,7 +62,8 @@ export default function LoginPage() {
               id="phone"
               type="tel"
               placeholder="Enter your phone number"
-              className="w-full px-4 py-3 text-sm outline-none"
+              className="w-full px-4 py-3 text-sm outline-none text-gray-900"
+              onChange={(e)=>setPhoneNum({...phoneNum,phone:e.target.value})}
             />
 
           </div>
@@ -45,7 +72,7 @@ export default function LoginPage() {
 
 
         {/* Continue Button */}
-        <button className="mt-6 w-full rounded-lg bg-green-700 py-3 font-semibold text-white transition hover:bg-green-800">
+        <button className="mt-6 w-full rounded-lg bg-green-700 py-3 font-semibold text-white transition hover:bg-green-800 cursor-pointer" onClick={handlePhoneLogin} >
           Continue
         </button>
 
