@@ -9,22 +9,31 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
 
-    // password: {
-    //   type: String,
-    //   required: true,
-    //   minlength: 6,
-    // },
-
+   
     role: {
       type: String,
       enum: ["user", "admin"],
       default: "user",
     },
 
-    isActive: {
-      type: Boolean,
-      default: true,
+     otp: {
+      type: String,
     },
+
+    otpExpiresAt: {
+      type: Date,
+    },
+
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
+  
+
+    // isActive: {
+    //   type: Boolean,
+    //   default: true,
+    // },
   },
   {
     timestamps: true,
