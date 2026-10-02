@@ -1,6 +1,48 @@
-import React from 'react';
+"use client";
 
+import { useState } from "react";
+import React from 'react';
+import { useRouter, useSearchParams } from "next/navigation";
 function page() {
+
+   const [otp, setOtp] = useState("");
+  const [message, setMessage] = useState("");
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const phone = searchParams.get("phone");
+
+  async function handleVerify(event) {
+    event.preventDefault();
+
+    if (!otp) {
+      setMessage("Please enter OTP");
+      return;
+    }
+
+    const response = await fetch("/api/auth/verify-otp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        phone,
+        otp,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setMessage("Login successful!");
+
+      // Later we can redirect to home
+      // router.push("/");
+    } else {
+      setMessage(data.message);
+    }
+  }
   return (
     <>
     
