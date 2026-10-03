@@ -1,11 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import React from 'react';
 import { useRouter, useSearchParams } from "next/navigation";
-function page() {
 
-   const [otp, setOtp] = useState("");
+function Page() {
+  const [otp1, setOtp1] = useState("");
+  const [otp2, setOtp2] = useState("");
+  const [otp3, setOtp3] = useState("");
+  const [otp4, setOtp4] = useState("");
+  const [otp5, setOtp5] = useState("");
+  const [otp6, setOtp6] = useState("");
+
   const [message, setMessage] = useState("");
 
   const router = useRouter();
@@ -13,19 +18,22 @@ function page() {
 
   const phone = searchParams.get("phone");
 
-  async function handleVerify(event) {
-    event.preventDefault();
+  async function handleVerify() {
+    const otp =
+      otp1 + otp2 + otp3 + otp4 + otp5 + otp6;
 
-    if (!otp) {
-      setMessage("Please enter OTP");
+    if (otp.length !== 6) {
+      setMessage("Please enter 6 digit OTP");
       return;
     }
 
     const response = await fetch("/api/auth/verify-otp", {
       method: "POST",
+
       headers: {
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify({
         phone,
         otp,
@@ -37,22 +45,22 @@ function page() {
     if (data.success) {
       setMessage("Login successful!");
 
-      // Later we can redirect to home
+      // Later
       // router.push("/");
     } else {
       setMessage(data.message);
     }
   }
+
   return (
-    <>
-    
-    
-     <main className="flex min-h-screen items-center justify-center bg-gray-50 px-5">
+    <main className="flex min-h-screen items-center justify-center bg-gray-50 px-5">
 
       <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-sm sm:p-10">
 
         {/* Logo */}
+
         <div className="text-center">
+
           <h1 className="text-3xl font-bold text-green-700">
             VegStore
           </h1>
@@ -66,60 +74,88 @@ function page() {
           </p>
 
           <p className="mt-1 font-medium text-gray-800">
-            +91 98765 43210
+            {phone}
           </p>
+
         </div>
 
 
         {/* OTP Inputs */}
+
         <div className="mt-8 flex justify-center gap-2 sm:gap-3">
 
           <input
             type="text"
             maxLength="1"
+            value={otp1}
+            onChange={(e) => setOtp1(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
           <input
             type="text"
             maxLength="1"
+            value={otp2}
+            onChange={(e) => setOtp2(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
           <input
             type="text"
             maxLength="1"
+            value={otp3}
+            onChange={(e) => setOtp3(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
           <input
             type="text"
             maxLength="1"
+            value={otp4}
+            onChange={(e) => setOtp4(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
           <input
             type="text"
             maxLength="1"
+            value={otp5}
+            onChange={(e) => setOtp5(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
           <input
             type="text"
             maxLength="1"
+            value={otp6}
+            onChange={(e) => setOtp6(e.target.value)}
             className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
           />
 
         </div>
 
 
+        {/* Message */}
+
+        {message && (
+          <p className="mt-4 text-center text-sm">
+            {message}
+          </p>
+        )}
+
+
         {/* Verify Button */}
-        <button className="mt-7 w-full rounded-lg bg-green-700 py-3 font-semibold text-white transition hover:bg-green-800">
+
+        <button
+          onClick={handleVerify}
+          className="mt-7 w-full rounded-lg bg-green-700 py-3 font-semibold text-white transition hover:bg-green-800"
+        >
           Verify OTP
         </button>
 
 
         {/* Resend */}
+
         <div className="mt-6 text-center">
 
           <p className="text-sm text-gray-500">
@@ -134,17 +170,18 @@ function page() {
 
 
         {/* Change Number */}
-        <button className="mt-5 w-full text-sm text-gray-400 hover:text-gray-600">
+
+        <button
+          onClick={() => router.push("/login")}
+          className="mt-5 w-full text-sm text-gray-400 hover:text-gray-600"
+        >
           Change phone number
         </button>
 
       </div>
 
     </main>
-    
-    
-    </>
   );
 }
 
-export default page;
+export default Page;
