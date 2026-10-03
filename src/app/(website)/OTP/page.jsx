@@ -89,7 +89,7 @@ function Page() {
             maxLength="1"
             value={otp1}
             onChange={(e) => setOtp1(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
           <input
@@ -97,7 +97,7 @@ function Page() {
             maxLength="1"
             value={otp2}
             onChange={(e) => setOtp2(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
           <input
@@ -105,7 +105,7 @@ function Page() {
             maxLength="1"
             value={otp3}
             onChange={(e) => setOtp3(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
           <input
@@ -113,7 +113,7 @@ function Page() {
             maxLength="1"
             value={otp4}
             onChange={(e) => setOtp4(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
           <input
@@ -121,7 +121,7 @@ function Page() {
             maxLength="1"
             value={otp5}
             onChange={(e) => setOtp5(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
           <input
@@ -129,7 +129,7 @@ function Page() {
             maxLength="1"
             value={otp6}
             onChange={(e) => setOtp6(e.target.value)}
-            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12"
+            className="h-12 w-11 rounded-lg border border-gray-300 text-center text-xl font-semibold outline-none focus:border-green-600 focus:ring-1 focus:ring-green-600 sm:h-14 sm:w-12 text-gray-950"
           />
 
         </div>

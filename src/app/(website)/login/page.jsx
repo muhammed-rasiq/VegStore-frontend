@@ -17,7 +17,8 @@ export default function LoginPage() {
       console.log(response)
 
       if(response.status===200){
-        router.push('/OTP')
+        // router.push('/OTP')
+       router.push(`/OTP?phone=${phoneNum.phone}`);
       }
     } catch (error) {
       console.log(error)

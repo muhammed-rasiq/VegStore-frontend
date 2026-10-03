@@ -85,8 +85,9 @@
 
 
 import { NextResponse } from "next/server";
-import { connectDB } from "@/lib/mongodb";
-import User from "@/models/User";
+// import { connectDB } from "@/lib/mongodb";
+import { connectDB } from "@/lib/db";
+ import User from "@/model/userModel";
 
 export async function POST(request) {
   try {
